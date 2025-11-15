@@ -1,0 +1,182 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-10-25 12:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "enabled",
+  "section_break_2",
+  "app_id",
+  "app_secret",
+  "column_break_4",
+  "access_token",
+  "token_expiry",
+  "webhook_section",
+  "webhook_callback_url",
+  "webhook_verify_token",
+  "column_break_webhook",
+  "webhook_is_active",
+  "webhook_instructions",
+  "section_break_6",
+  "auto_create_forms",
+  "form_creation_settings",
+  "section_break_7",
+  "authorization_url",
+  "access_token_url",
+  "column_break_10",
+  "scope",
+  "api_version"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break",
+   "label": "Facebook App Credentials"
+  },
+  {
+   "fieldname": "app_id",
+   "fieldtype": "Data",
+   "label": "App ID (Client ID)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "app_secret",
+   "fieldtype": "Data",
+   "label": "App Secret (Client Secret)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "access_token",
+   "fieldtype": "Data",
+   "label": "Access Token"
+  },
+  {
+   "fieldname": "token_expiry",
+   "fieldtype": "Datetime",
+   "label": "Token Expiry"
+  },
+  {
+   "collapsible": 1,
+   "depends_on": "eval:doc.enabled",
+   "fieldname": "webhook_section",
+   "fieldtype": "Section Break",
+   "label": "Webhook Configuration"
+  },
+  {
+   "fieldname": "webhook_callback_url",
+   "fieldtype": "Data",
+   "label": "Webhook Callback URL",
+   "read_only": 1
+  },
+  {
+   "fieldname": "webhook_verify_token",
+   "fieldtype": "Data",
+   "label": "Webhook Verify Token"
+  },
+  {
+   "fieldname": "column_break_webhook",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "webhook_is_active",
+   "fieldtype": "Check",
+   "label": "Webhook Active on Facebook"
+  },
+  {
+   "fieldname": "webhook_instructions",
+   "fieldtype": "HTML",
+   "label": "Instructions",
+   "options": "<div style='padding: 10px; background: #f8f9fa; border-radius: 4px;'><strong>📋 Setup Instructions:</strong><ol style='margin: 10px 0;'><li>Copy the <strong>Callback URL</strong> and <strong>Verify Token</strong> above</li><li>Go to <a href='https://developers.facebook.com' target='_blank'>Facebook Developers</a></li><li>Select your app → <strong>Webhooks</strong></li><li>Click <strong>Edit Subscription</strong> for <strong>Page</strong></li><li>Paste the URL and Token</li><li>Subscribe to <strong>leadgen</strong> field</li></ol></div>"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "label": "Form Creation Settings"
+  },
+  {
+   "default": "0",
+   "fieldname": "auto_create_forms",
+   "fieldtype": "Check",
+   "label": "Auto Create Forms"
+  },
+  {
+   "fieldname": "form_creation_settings",
+   "fieldtype": "HTML",
+   "label": "Form Creation Info",
+   "options": "<div style='padding: 10px; background: #e8f4fd; border-radius: 4px;'><strong>📝 Form Creation:</strong><ul style='margin: 10px 0;'><li>When enabled, forms will be automatically created from Facebook Lead data</li><li>Forms will be published and accessible via web</li><li>Form fields will be mapped from Facebook field data</li><li>Forms will be linked to Facebook Lead Ads documents</li></ul></div>"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break",
+   "label": "OAuth2 Configuration"
+  },
+  {
+   "default": "https://www.facebook.com/v24.0/dialog/oauth",
+   "fieldname": "authorization_url",
+   "fieldtype": "Data",
+   "label": "Authorization URL"
+  },
+  {
+   "default": "https://graph.facebook.com/v24.0/oauth/access_token",
+   "fieldname": "access_token_url",
+   "fieldtype": "Data",
+   "label": "Access Token URL"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "leads_retrieval pages_show_list pages_manage_metadata pages_manage_ads business_management ads_management ads_read",
+   "fieldname": "scope",
+   "fieldtype": "Data",
+   "label": "Scope"
+  },
+  {
+   "default": "v24.0",
+   "fieldname": "api_version",
+   "fieldtype": "Data",
+   "label": "API Version"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-10-25 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Meta",
+ "name": "Facebook Lead Ads Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
+
