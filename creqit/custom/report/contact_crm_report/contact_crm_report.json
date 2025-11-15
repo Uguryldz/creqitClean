@@ -1,0 +1,21 @@
+{
+ "actions": [],
+ "creation": "2024-03-23 16:01:31.173691",
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "No",
+ "json": "{}",
+ "modified": "2024-03-23 16:01:31.173691",
+ "modified_by": "Administrator",
+ "module": "Custom",
+ "name": "Contact CRM Report",
+ "owner": "Administrator",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "script": "contact_crm_report.py"
+} 
